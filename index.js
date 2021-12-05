@@ -1,9 +1,11 @@
 const http = require("http");
 const websocketServer = require("websocket").server
 const uuid = require("uuid");
+const cors = require("cors");
+require("dotenv").config();
 
 const httpServer = http.createServer();
-httpServer.listen(8080, () => console.log('Server running...'))
+httpServer.listen(process.env.PORT || 8080, () => console.log('Server running...'))
 
 const clients = {};
 const games = {};
