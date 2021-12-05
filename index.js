@@ -50,6 +50,7 @@ wsServer.on("request", request => {
             const clientName = result.clientName;
             const gameId = result.gameId;
             const game = games[gameId];
+
             game.clients.push({
                 "clientId": clientId,
                 "clientName": clientName
